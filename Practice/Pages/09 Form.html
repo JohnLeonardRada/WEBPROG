@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Form</title>
+		<script src="https://kit.fontawesome.com/e4cf9541ab.js" crossorigin="anonymous"></script>
+		<link rel="stylesheet" type="text/css" href="01 StyleSheet.css">
+
+
+		<style type="text/css">
+			h1.heading-design{
+				background-color: red;
+			}
+		</style>
+
+	</head>
+
+	<body>
+		<!-- USING CSS SELECTOR -->
+		<div class="div-design">
+			<h1 class="heading-design"> Heading 1 </h1>
+			<h1> Heading 1 </h1>
+			<h1 class="heading-design"> Heading 1 </h1>
+			<p class="heading-design"> This is a paragraph </p>
+
+		</div>
+
+		<div>
+			<p class="heading-design"> This is another paragraph </p>	
+			<p class="heading-design"> This is another paragraph </p>
+		</div>
+
+
+		<!-- USING FORM TAG -->
+		<form action="10 FormResult.html" method="GET" enctype="multipart/form-data">
+			<!--Username-->
+			<div>
+				<label for="username"><i class="fas fa-envelope-open-text"
+					style="color: brown"></i> Username</label>
+				<input type="text" name="username" id="username" placeholder="Username" required>
+			</div>
+
+			<!--Password-->
+			<div>
+				<label for="pass">Password</label>
+				<input type="password" name="pass" id="pass" placeholder="Password" required>
+			</div>
+
+			<!--Age-->
+			<div>
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age" min="1" max="80">
+			</div>
+
+			<!--Birthdate-->
+			<div>
+				<label for="Birthdate">Birthdate</label>
+				<input type="date" name="date" id="date">
+			</div>
+
+			<!--Email-->
+			<div>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+			</div>
+
+			<!--Favorite Drink-->
+			<br>
+			<div>
+				Favorite Drink
+				<div>
+					<label for="coffee">Coffee</label>
+					<input type="checkbox" name="coffee" id="coffee">
+				</div>
+
+				<div>
+					<label for="tea">Tea</label>
+					<input type="checkbox" name="tea" id="tea">
+				</div>
+
+			</div>
+
+			<!--Gender-->
+			<br>
+			<div>
+				Gender
+				<div>
+					<label for="male">Male</label>
+					<input type="radio" name="gender" id="male" value="Male">
+				</div>
+
+				<div>
+					<label for="female">Female</label>
+					<input type="radio" name="gender" id="female" value="Female">
+				</div>
+			
+			</div>
+
+			<!--Hair Color-->
+			<br>
+			<div>
+				<label for="hairColor">Hair Color</label>
+				<select name="hairColor" id="hairColor">
+					<option value="black">Black</option>
+					<option value="brown">Brown</option>
+				</select>
+			</div>
+
+			<!--Text Area-->
+			<div>
+				<label for="bio">Bio</label>
+				<textarea name="bio" id="bio">Bio</textarea>
+			</div>
+
+			<!--Phone-->
+			<div>
+				<label for="phone">Phone</label>
+				<input type="tel" name="phone" id="phone">
+			</div>
+			
+			<!--Color-->
+			<div>
+				<label for="color">Color</label>
+				<input type="color" name="color" id="color">
+			</div>
+
+			<!--File-->
+			<div>
+				<label for="file">File</label>
+				<input type="file" name="file" id="file">
+			</div> 
+
+			<table>
+				<tr>
+					<td><label for="file">File</label></td>
+					<td><input type="file" name="file" id="file"></td>
+				</tr>
+			</table>
+
+			<table>
+				<tr>
+					<td><label for="username">Username</label></td>
+					<td><input type="text" name="username" id="username" placeholder="Username" required></td>
+				</tr>
+			</table>
+
+			<input type="hidden" name="secretData" id="secretData">
+
+			<!--Button-->
+			<button type="Reset">Reset</button>
+			<button type="Submit">Submit</button>
+		</form>
+
+	</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>ORDER</title>
+	</head>
+	
+	<body>
+		<form action="Result.html" method="GET" enctype="multipart/form-data">
+		<h1 style="text-align: center;">Starbucks</h1>
+
+		<table align="center">
+			<tr>
+				<td><label for="name">Name:</label></td>
+				<td><input type="text" name="name" id="name" required></td>
+			</tr>
+		</table>
+
+		<table align="center">
+			<tr>
+				<td><label for="email">Email:</label></td>
+				<td><input type="email" name="email" id="email" required></td>
+			</tr>
+		</table>
+			
+		<table>
+			<table border="1" align="center" width="250">
+			<tr>
+				<th colspan="3">Drinks</th>
+			</tr>
+
+			<tr>
+				<div>
+
+					<div>
+						<th><label for="coffee">Coffee</label>
+							<input type="radio" name="gender" id="coffee" value="coffee" required>
+						</th>
+					</div>
+					
+					<div>
+						<th><label for="Tea">Tea</label>
+							<input type="radio" name="gender" id="Tea" value="Tea" required>
+						</th>
+					</div>
+
+					<div>
+						<th><label for="shake">Shake</label>
+							<input type="radio" name="gender" id="shake" value="shake" required>
+						</th>
+					</div>
+
+				</div>
+			</table>	
+		</table>
+
+		<table align="center">
+				<td><label for="drinks">Drinks</label></td>
+				<td><select name="drinks" id="drinks" required>
+					<option value="latte">Latte</option>
+					<option value="macchiato">Macchiato</option>
+					<option value="americano">Americano</option>
+					<option value="green tea">Green Tea</option>
+					<option value="black tea">Black Tea</option>
+					<option value="yellow tea">Yellow Tea</option>
+					<option value="cookies and cream milkshake">C'n'C Milkshake</option>
+					<option value="chocolate milkshake">Chocolate Milkshake</option>
+					<option value="strawberry milkshake">Strawberry Milkshake</option>
+				</select></td>
+			</tr>
+		</table>
+
+		<table>
+			<div align="center">
+				<label for="quantity">Quantity:</label>
+				<input type="number" name="quantity" id="quantity" min="1" vspace="2" required>
+			</div>
+		</table>
+
+		<table>
+			<div align="center"> 
+				<label for="message">Message:</label>
+				<textarea name="message" id="message"></textarea>
+			</div>
+		</table>
+
+
+
+			<br>
+			<div align="center">
+			<button type="reset">Reset</button>
+			<button type="Submit">Submit</button>
+			</div>
+
+		</form>
+	</body>
+</html>

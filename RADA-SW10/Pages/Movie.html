@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Display</title>
+
+	<style type="text/css">
+		.store-items{
+			text-align: center;
+		}
+		.store-item{
+			text-align: left;
+			/* width: 200px;
+			height: 200px; */
+			background-color: pink;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid yellow;
+			color: white;
+			//overflow: auto;
+		  display: inline-block;
+		}
+
+    .store-item-image{
+      height: 250px;
+      width: 250px;
+    }
+
+		.store-item-title{
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+			width: 100%;
+		}
+
+		.cart-item-price-base{
+			display: none;
+		}
+
+
+
+
+		</style>
+		<script type="text/javascript" src="../JS/Movie.js"></script>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="ready()">
+
+  <div class="container">
+        <br>
+        <nav>
+          <ol class="breadcrumb">
+           <a type="button" class="btn btn-primary" href="Landing.html">Home</a>
+
+           <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal"> VIEW CART </button>
+           	<div class="modal fade" id="orderModal">
+           		<div class="modal-dialog">
+           			<div class="modal-content">
+           				<div class="modal-header">
+           					<h5>Cart Summary</h5>
+           				</div>
+           					<div class="modal-body">
+                      <input type="checkbox" id="myCheck">
+           						<div class="cart-items">
+
+           						</div>
+           						<div class="modal-footer">
+           							<span class="cart-total-price"> Php 0.00 </span>
+           						</div>
+
+           				</div>
+           			</div>
+           		</div>
+           	</div>
+         </nav>
+    </div>
+
+
+	<div class="store-items">
+    <h2>ACTION</h2>
+		<div class = "store-item">
+      <div class="store-item-title">Avengers: Infinity War</div>
+      <img class="store-item-image" src="../Images/iw.jpg"  onclick="onClickFunction()" data-toggle="modal" data-target="#modalSample1">
+      <div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+  	</div>
+
+		<div class = "store-item">
+      <div class="store-item-title">Avengers: Endgame</div>
+      <img class="store-item-image" src="../Images/eg.jpg" onclick="onClickFunction()" data-toggle="modal" data-target="#modalSample2">
+      <div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+    </div>
+
+    <br>
+    <h2>ROMANCE</h2>
+		<div class = "store-item">
+			<div class="store-item-title">Garden of Words</div>
+      <img class="store-item-image" src="../Images/gw.jpg" onclick="onClickFunction()" data-toggle="modal" data-target="#modalSample3">
+      <div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+		</div>
+
+    <div class = "store-item">
+			<div class="store-item-title">Your Name</div>
+      <img class="store-item-image" src="../Images/yn.jpg" onclick="onClickFunction()" data-toggle="modal" data-target="#modalSample4">
+      <div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+		</div>
+	</div>
+
+  <div id="modalSample1" class="modal fade">
+  			<div class="modal-dialog">
+  				<div class="modal-content">
+            <div class="modal-header">
+              <h5>Avengers</h5>
+            </div>
+  		        <div class="input-group">
+  			           <div class="input-group-prepend"></div>
+  				    <div class="input-group-text"><img src="../Images/iw.jpg" alt="lol"></div>
+              <p>The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.</p>
+              <div class="modal-footer">
+                <span class="cart-total-price"> Php 100.00 </span>
+              </div>
+            </div>
+    		</div>
+      </div>
+    </div>
+
+    <div id="modalSample2" class="modal fade">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>Avengers: Infinity War</h5>
+              </div>
+                <div class="input-group">
+                     <div class="input-group-prepend"></div>
+                <div class="input-group-text"><img src="../Images/eg.jpg" alt="lol"></div>
+                <p>After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</p>
+                <div class="modal-footer">
+                  <span class="cart-total-price"> Php 100.00 </span>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="modalSample3" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5>Garden of Words</h5>
+                </div>
+                  <div class="input-group">
+                       <div class="input-group-prepend"></div>
+                  <div class="input-group-text"><img src="../Images/gw.jpg" alt="lol"></div>
+                  <p>When a lonely teenager skips his morning lessons to sit in a lovely garden, he meets a mysterious older woman who shares his feelings of alienation.</p>
+                  <div class="modal-footer">
+                    <span class="cart-total-price"> Php 100.00 </span>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="modalSample4" class="modal fade">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5>Your Name</h5>
+                  </div>
+                    <div class="input-group">
+                         <div class="input-group-prepend"></div>
+                    <div class="input-group-text"><img src="../Images/yn.jpg" alt="lol"></div>
+                    <p>Two teenagers share a profound, magical connection upon discovering they are swapping bodies. But things become even more complicated when the boy and girl decide to meet in person.</p>
+                    <div class="modal-footer">
+                      <span class="cart-total-price"> Php 100.00 </span>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+</body>
+</html>

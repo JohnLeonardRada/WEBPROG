@@ -1,0 +1,11 @@
+.navBar{
+  background-color: #2EAF7D;
+  position: sticky;
+  top: 5px;
+}
+
+.breadcrumb-item{
+  background-color: #2EAF7D;
+  position: sticky;
+  top: 5px;
+}

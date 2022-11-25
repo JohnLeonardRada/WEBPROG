@@ -1,0 +1,98 @@
+h1 {
+font-family: 'CustomFont', Aesthetik Script;
+font-weight:normal;
+font-style:normal;
+}
+
+.background{
+	background-image: url(../Images/bg.jpg);
+	background-size: 30%;
+}
+
+.bar{
+	background-color: #A8ff3E;
+	border: 2px solid #0AD48B;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px auto;
+	width: 40%;
+}
+
+.div-design{
+	background-color: #A8ff3E;
+	border: 2px solid #0AD48B;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px auto;
+	width: 40%;
+}
+
+
+#custom-form{
+	background-color: #A8ff3E;
+	border: 2px solid #0AD48B;
+	border-radius: 20px;
+	padding: 10px;
+	margin: 10px auto;
+	width: 40%;
+ }
+
+#custom-form label{
+	border:2px;
+	display: block;
+	text-transform: uppercase;
+	font-size: 14px;
+	padding: 10px 0 10px;
+}
+
+#custom-form input, textarea{
+	padding: 5px;
+	width: 20%;
+	border: 0px;
+	/*border: 2px solid gray;*/
+	border-bottom: 2px solid #1D800E;
+	border-radius: 5px;
+	font-size: 14px;
+	width: 50%;
+}
+
+#custom-form select {
+	padding: 5px;
+	width: 21%;
+	border: 0px;
+	border-bottom: 2px solid #1D800E;
+	border-radius: 5px;
+	font-size: 14px;
+	width: 50%;
+}
+
+#custom-form table{
+	padding: 3px;
+	width: 50%;
+}
+
+#custom-form input:focus, textarea:focus{
+	border: 2px solid yellow;
+	background-color: white;
+	color: black;
+}
+
+#custom-form textarea{
+	resize: none;
+}
+
+#custom-form button{
+	background-color: #308355;
+	color: white;
+	padding: 4px;
+	border-radius: 5px;
+	text-transform: uppercase;
+}
+
+#custom-form #submit:hover {
+	background-color: green;
+}
+
+#custom-form #reset:hover {
+	background-color: red;
+}

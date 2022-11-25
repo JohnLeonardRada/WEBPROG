@@ -1,0 +1,36 @@
+.parent{
+  background-color: #3FD0C9;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+}
+
+.child{
+ 
+  padding: 5px;
+}
+
+
+.child-first{
+  background-color: #2EAF7D;
+  position: sticky;
+  top: 5px;
+  /*left: 50px;*/
+  /*right: 50px;*/
+  /*width: 50%;*/
+
+}
+
+.child-second{
+  background-color: #449342;
+  position: fixed;
+
+}
+
+.child-third{
+  background-color: #02353C;
+}
+
+.child-fourth{
+  background-color: #C1F6ED;
+}

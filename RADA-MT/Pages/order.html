@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Order</title>
+    <link rel="stylesheet" type="text/css" href="../CSS/order-stylesheet.css">
+  </head>
+
+  <body>
+    <section>
+      <a href="../Pages/cartSummary.html"><i class="fas fa-shopping-cart"></i>Back to Cart</a>
+    </section>
+    <div class="head" style="text-align: center;">
+  	<h1>Order Summary</h1>
+    <div class ="head2">
+			<br>
+			<table border="1" align="center" width = 100%;>
+				<div class = "head4">
+				
+        <tr>
+						<th width = 150px;>
+              <div>
+					       <input type="checkbox" name="cloth" id="cloth">
+                 <img src="../Images/m1.jpg">
+                 <p style=text-align:center;>PHP5,490.00</p>
+				      </div>
+						<td style="text-align: TOP;"> PADDED JACKET
+              <br><br>
+              <div>
+                <label for="age"><i class="fas fa-list-ol"></i> Quantity</label>
+                <input type="number" name="quantity" id="quantity" min="1" required>
+              </div> </td>
+					</tr>
+
+          <tr>
+						<th width = 150px;>
+              <div>
+					       <input type="checkbox" name="cloth" id="cloth">
+                 <img src="../Images/w1.jpg">
+                 <p style=text-align:center;>PHP3,290.00</p>
+				      </div>
+						<td style="text-align: TOP;"> LONG DRESS W/ SCARF
+              <br><br>
+              <div>
+                <label for="age"><i class="fas fa-list-ol"></i> Quantity</label>
+                <input type="number" name="quantity" id="quantity" min="1" required>
+              </div> </td>
+					</tr>
+
+          <tr>
+            <th width = 150px;>
+              <div>
+                 <input type="checkbox" name="cloth" id="cloth">
+                 <img src="../Images/k1.jpg">
+                 <p style=text-align:center;>PHP599.00</p>
+              </div>
+            <td style="text-align: TOP;"> COTTON JERSEY SET
+              <br><br>
+              <div>
+                <label for="age"><i class="fas fa-list-ol"></i> Quantity</label>
+                <input type="number" name="quantity" id="quantity" min="1" required>
+              </div> </td>
+          </tr>
+				</div>
+			</table>
+      <br>
+      <h5>Total Items: 3</h5>
+    </div>
+
+    <div style="text-align:left">
+    <p>Recipient Name</p>
+    <div>
+				<label for="name"><i class="fas fa-id-card"></i>First Name:</label>
+				<input type="text" name="name" id="name" placeholder="Name" required>
+        <br>
+        <label for="name"><i class="fas fa-id-card"></i>Last Name:</label>
+        <input type="text" name="name" id="name" placeholder="Name" required>
+		</div>
+    <div>
+      <p>Shipping Address</p>
+      <label for="name"><i class="fas fa-id-card"></i>Address Line 1:</label>
+      <input type="text" name="address" id="address" placeholder="Address" required>
+      <br>
+      <label for="name"><i class="fas fa-id-card"></i>Address Line 2:</label>
+      <input type="text" name="address" id="address" placeholder="Address" required>
+    </div>
+    <select name="drinks" id="drinks" required>
+      <option value="choices">--City--</option>
+    </select></td>
+    <select name="drinks" id="drinks" required>
+      <option value="choices">--Region--</option>
+    </select></td>
+    <label for="name"><i class="fas fa-id-card"></i></label>
+    <input type="text" name="zip" id="zip" placeholder="Zip Code" required>
+    <br>
+    <select name="drinks" id="drinks" required>
+      <option value="choices">--Country--</option>
+    </select></td>
+    <label for="name"><i class="fas fa-id-card"></i></label>
+    <input type="text" name="zip" id="zip" placeholder="Contact Number" required>
+    <p>Shipping Method</p>
+    <select name="drinks" id="drinks" required>
+      <option value="choices">--Select Preferred Method--</option>
+    </select></td>
+    <br>
+    <label for="name"><i class="fas fa-id-card"></i></label>
+    <br>
+    <tr>
+      <th width = 150px;> Subtotal: </th>
+      <td style="text-align: right;"> PHP9,379.00 </td>
+    </tr>
+    <br>
+    <tr>
+      <th width = 150px;> Shipping: </th>
+      <td style="text-align: right;"> PHP0.00 </td>
+    </tr>
+  </table>
+   <h1 style="text-align:center;">Total: PHP9,379.00</h1>
+   <button type="submit" id="submit""><a href="../Pages/orderConfirmation.html">Place Order</a></button>
+
+    </div>
+  </body>
+</html>

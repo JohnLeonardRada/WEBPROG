@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title> Meeting 12</title>
+
+    <script type="text/javascript">
+
+      function CheckboxFunction(){
+      // <!-- Get the select-all checkbox(parent) -->
+      var parentCheckbox = document.getElementById('select-all');
+
+      // <!-- Get all the checkboxes(select-store-item class) -->
+      var checkboxes = document.getElementsByClassName('select-store-item')
+
+      // <!-- Loop  thru all the checkboxes(select-store-item)
+      // and mark it to whatever is the value of the parent(select-all) -->
+      for(var i=0; i < checkboxes.length; i++){
+        checkboxes[i].checked = parentCheckbox.checked;
+        }
+
+      }
+
+      function RemovesSelectedCheckbox(){
+        var confirmation = confirm("Are you sure?");
+
+        if(confirmation){
+          //
+          var checkboxes = document.getElementsByClassName('select-store-item');
+
+          //From all the checkboxes, get only those marked as checked and store it in a variable
+          var checkedHolder = [];
+          var counter = 0;
+          for(var i=0; i < checkboxes.length; i++){
+            if(checkboxes[i].checked){
+              checkedHolder[counter] = checkboxes[i].parentElement;
+              counter++;
+            }
+          }
+
+          for(var i = 0; i < checkedHolder.length; i++){
+            checkedHolder[i].remove();
+          }
+
+          document.getElementById('select-all').checked = false;
+        }
+      }
+
+      function SubmitFunction(){
+        alert('Submitted!');
+
+        if(document.getElementById('username').value=="leo"){
+              document.getElementById('formTest').submit();
+        }
+
+      }
+
+    </script>
+  </head>
+
+  <body>
+
+      <div class="">
+        <input type="checkbox" name="" id="select-all" onclick="CheckboxFunction()">
+        Select All
+
+        <button onclick="RemovesSelectedCheckbox()"> Remove </button>
+      </div>
+
+      <div class="">
+        <input type="checkbox" name="" class="select-store-item">
+        Item 1
+      </div>
+      <div class="">
+        <input type="checkbox" name="" class="select-store-item">
+        Item 2
+      </div>
+      <div class="">
+        <input type="checkbox" name="" class="select-store-item">
+        Item 3
+      </div>
+
+
+
+      <form action="m21-redirect.html" method="GET" id="formTest">
+        <br>
+        <input type="text" name="username" placeholder="Username" id="username">
+        <br>
+        <input type="text" name="fname" placeholder="First Name">
+        <br>
+        <input type="text" name="lname" placeholder="Last Name">
+        <br>
+        <!-- <button type="submit" name="button">Submit</button> -->
+        <button type="button" onclick="SubmitFunction()"> Submit </button>
+      </form>
+
+  </body>
+</html>

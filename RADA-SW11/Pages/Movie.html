@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  body {
+    background-image: url(../Images/bg.jpg);
+    background-size: 100%;
+
+  }
+
+
+.store-item{
+    /*width: 200px;
+    height: 200px;*/
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid pink;
+    /*color: white;
+    overflow: auto;*/
+    display: inline-block;
+    }
+
+.store-items{
+    text-align: center;
+    }
+
+.store-item-image{
+    height: 250px;
+    width: 200px;
+    }
+
+.store-item-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+    }
+
+.cart-item-image{
+    height: 200px;
+    width: 150px;
+    }
+
+.cart-item-price-base{
+    display: none;
+    }
+
+.header{
+    color: white;
+    }
+
+.store-item-desc{
+    display: none;
+    }
+</style>
+
+<script type="text/javascript" src="../JS/Movie.js"></script>
+
+</head>
+<body onload="ready()">
+  <div class="container">
+    <br>
+    <nav>
+      <ol class="breadcrumb">
+       <a type="button" class="btn btn-primary" href="Landing.html">Home</a>
+
+       <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal"> VIEW CART </button>
+        <div class="modal fade" id="orderModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5>Cart Summary</h5>
+              </div>
+                <div class="modal-body">
+                  <div class="col">
+                    <input type="checkbox" name="" id="select-all" onclick="CheckboxFunction()">
+                      Select All
+                      <button onclick="RemovesSelectedCheckbox()"> Remove </button>
+                  </div>
+                  <div class="cart-items">
+
+                  </div>
+                  <div class="modal-footer">
+
+                    <span class="cart-total-price"> Php 0.00 </span>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <a type="button" class="btn btn-primary" href="OrderForm.html"> CheckOut </a>
+     </nav>
+   </div>
+
+      <div class="store-items">
+        <div class="header"><h1>L's Movie House</h1></div>
+          <div class="store-item">
+            <img class="store-item-image" src="../Images/eg.jpg" data-toggle="modal" data-target="#movieModal">
+
+            <div class="store-item-title">Avengers: Endgame</div>
+              <div class="store-item-desc">
+              <p>The Avengers must stop Thanos, an intergalactic warlord, from getting his hands on all the infinity stones. However, Thanos is prepared to go to any lengths to carry out his insane plan.</p>
+              </div>
+
+              <div class="store-item-details">
+              <span class="store-item-price">Php 200.00</span>
+              <button class="store-item-button">Add to cart</button>
+            </div>
+          </div>
+
+      <div class="store-item">
+        <img class="store-item-image" src="../Images/iw.jpg" data-toggle="modal" data-target="#movieModal">
+          <div class="store-item-title">Avengers: Infinity War</div>
+
+            <div class="store-item-desc">
+            <p>After Thanos, an intergalactic warlord, disintegrates half of the universe, the Avengers must reunite and assemble again to reinvigorate their trounced allies and restore balance.</p>
+            </div>
+
+            <div class="store-item-details">
+              <span class="store-item-price">Php 250.00</span>
+              <button class="store-item-button">Add to cart</button>
+            </div>
+      </div>
+
+      <div class="store-item">
+        <img class="store-item-image" src="../Images/gw.jpg" data-toggle="modal" data-target="#movieModal">
+          <div class="store-item-title">Garden of Words</div>
+
+            <div class="store-item-desc">
+              <p>When a lonely teenager skips his morning lessons to sit in a lovely garden, he meets a mysterious older woman who shares his feelings of alienation.</p>
+            </div>
+
+            <div class="store-item-details">
+              <span class="store-item-price">Php 50.00</span>
+              <button class="store-item-button">Add to cart</button>
+            </div>
+      </div>
+
+      <div class="store-item">
+        <img class="store-item-image" src="../Images/yn.jpg" data-toggle="modal" data-target="#movieModal">
+          <div class="store-item-title">Your Name</div>
+
+          <div class="store-item-desc">
+          <p>Two teenagers share a profound, magical connection upon discovering they are swapping bodies. But things become even more complicated when the boy and girl decide to meet in person.</p>
+          </div>
+
+          <div class="store-item-details">
+              <span class="store-item-price">Php 150.00</span>
+              <button class="store-item-button">Add to cart</button>
+          </div>
+      </div>
+
+  </div>
+
+      <!-- <div class="modal fade" id="movieModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="movie-title"></span>
+            </div>
+              <div class="modal-body">
+                <span class="movie-des"></span>
+              </div>
+          </div>
+        </div>
+      </div> -->
+
+</body>
+</html>

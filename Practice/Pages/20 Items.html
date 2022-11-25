@@ -1,0 +1,143 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Display</title>
+
+	<style type="text/css">
+		.store-items{
+			text-align: center;
+		}
+		.store-item{
+			text-align: left;
+			/* width: 200px;
+			height: 200px; */
+			background-color: pink;
+			margin: 10px;
+			padding: 10px;
+			border-radius: 5px;
+			border: 1px solid yellow;
+			color: white;
+			//overflow: auto;
+		  display: inline-block;
+		}
+
+    .store-item-image{
+      height: 250px;
+      width: 250px;
+    }
+
+		.store-item-title{
+			text-align: center;
+			font-weight: bold;
+			font-size: 18px;
+			width: 100%;
+		}
+
+		.cart-item-price-base{
+			display: none;
+		}
+
+		.store-item-desc{
+			display: none;
+		}
+
+
+		</style>
+		<script type="text/javascript" src="../JS/Items.js"></script>
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+		    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+</head>
+
+<body onload="ready()">
+	<div class="store-items">
+
+		<div class = "store-item">
+      <div class="store-item-title">MOVIE1</div>
+      <img class="store-item-image" src="../Images/spongebob.jpg" data-toggle="modal" data-target="#movieModal">
+			<div class="store-item-desc">
+				Movie 1 Desc
+			</div>
+			<div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+  	</div>
+
+		<div class = "store-item">
+      <div class="store-item-title">MOVIE2</div>
+      <img class="store-item-image" src="../Images/spongebob.jpg" data-toggle="modal" data-target="#movieModal">
+			<div class="store-item-desc">
+				Movie 2 Desc
+			</div>
+		  <div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+    </div>
+
+		<div class = "store-item">
+			<div class="store-item-title">MOVIE3</div>
+      <img class="store-item-image" src="../Images/spongebob.jpg" data-toggle="modal" data-target="#movieModal">
+			<div class="store-item-desc">
+				Movie 3 Desc
+			</div>
+			<div class="store-item-details">
+        <span class="store-item-price">Php100.00</span>
+        <button class="store-item-button"> ADD TO CART </button>
+
+      </div>
+		</div>
+	</div>
+
+
+	<button class="btn btn-primary" data-toggle="modal" data-target="#orderModal"> VIEW CART </button>
+
+	<div class="modal fade" id="orderModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5>Cart Summary</h5>
+				</div>
+					<div class="modal-body">
+						<div class="cart-items">
+
+						</div>
+
+						<div class="modal-footer">
+							<span class="cart-total-price"> Php 0.00 </span>
+							<button onclick="PurchaseFunction()">Purchase</button>
+						</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+	<p class="test"> RESULT </p>
+
+	<!-- Movie Description Modal-->
+	<div class="modal fade" id="movieModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<span class="movie-title"><h3>SpongeBob</h3></span>
+				</div>
+
+				<div class="modal-body">
+					<span class="movie-description">	<p>SpongeBob SquarePants cheerfully prepares for the opening ceremony for a second Krusty Krab, expecting his boss Mr. Krabs to promote him as new manager of the new restaurant. Instead, Mr. Krabs names Squidward Tentacles, SpongeBob’s next-door neighbor and co-worker, as manager, thinking SpongeBob is too immature to handle the role, much to SpongeBob's depression. Meanwhile, Mr. Krabs' business rival, Plankton, complains about his failures to his computer wife Karen, being unable to steal the Krabby Patty formula. When Karen points out plan "Z", a scheme which he has yet to attempt, Plankton decides to implement it.</p>
+					</span>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

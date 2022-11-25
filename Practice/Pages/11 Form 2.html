@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Form</title>
+		<script src="https://kit.fontawesome.com/e4cf9541ab.js" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" type="text/css" href="../CSS/forms-stylesheet.css">
+
+		<style type="text/css">
+			.overflow-samp{
+				background-color: yellow;
+				width: 500px;
+				height: 500px;
+				overflow: auto;
+			}
+
+			.float-samp{
+				float: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="overflow-samp">
+			<img src="../Images/spongebob.jpg" width="400px" height="400px">
+			A yellow sea sponge named SpongeBob SquarePants, who enjoys being a cook at Krusty Krab, lives in the Pacific Ocean. He embarks on various adventures with his friends at Bikini Bottom.
+		</div>
+		<!-- USING FORM TAG -->
+
+		<h1 style="text-align: center;">DATABASE</h1>
+		<form id ="custom-form"action="10 FormResult.html" method="GET" enctype="multipart/form-data" style="text-align: center;">
+			<!--Username-->
+			<div>
+				<label for="username"><i class="fas fa-envelope-open-text"
+					style="color: brown"></i> Username</label>
+				<input type="text" name="username" id="username" placeholder="Username" required>
+			</div>
+
+			<!--Password-->
+			<div>
+				<label for="pass"><i class="fas fa-envelope-open-text"
+					style="color: brown"></i> Password</label>
+				<input type="password" name="pass" id="pass" placeholder="Password" required>
+			</div>
+
+			<!--Age-->
+			<div>
+				<label for="age">Age</label>
+				<input type="number" name="age" id="age" min="1" max="80">
+			</div>
+
+			<!--Birthdate-->
+			<div>
+				<label for="Birthdate">Birthdate</label>
+				<input type="date" name="date" id="date">
+			</div>
+
+			<!--Email-->
+			<div>
+				<label for="email">Email</label>
+				<input type="email" name="email" id="email">
+			</div>
+
+			<!--Phone-->
+			<div>
+				<label for="phone">Phone</label>
+				<input type="tel" name="phone" id="phone">
+			</div>
+			
+			<!--Color-->
+			<div>
+				<label for="color">Color</label>
+				<input type="color" name="color" id="color">
+			</div>
+
+			<!--File-->
+			<div>
+				<label for="file">File</label>
+				<input type="file" name="file" id="file">
+			</div> 
+
+			<!--Text Area-->
+			<div>
+				<label for="bio">Bio</label>
+				<textarea name="bio" id="bio">Bio</textarea>
+			</div>
+
+			<input type="hidden" name="secretData" id="secretData">
+
+			<!--Button-->
+			<button type="Reset" id="reset">Reset</button>
+			<button type="Submit" id="submit">Submit</button>
+		</form>
+
+	</body>
+</html>

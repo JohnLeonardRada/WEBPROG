@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+
+<html class="background">
+
+	<head>
+		<title>Coffee Shop</title>
+		<script src="https://kit.fontawesome.com/e4cf9541ab.js" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" type="text/css" href="../CSS/Order-StyleSheet.css">
+		<link rel="stylesheet" type="text/css" href="../CSS/Homepage-StyleSheet.css">
+	</head>
+
+	<body>
+	<!-- BREADCRUMB -->
+	<nav class="bar">
+		<ul class="breadcrumb">
+			<li class="breadcrumb-item active"><a href="Homepage(Modified).html">HOME</a> </li>
+			<li class="breadcrumb-item"><a href="Order(Modified).html">ORDER</a></li>
+			<li class="breadcrumb-item"><a href="Result.html">RESULT</a></li>
+		</ul>
+	</nav>
+
+		<!-- USING FORM TAG -->
+
+		<div class="div-design" style="text-align: center;">
+			<h1 class="heading-design"> UNWIND COFFEE SHOP </h1>
+		</div>
+
+		<form id ="custom-form"action="Result.html" method="GET" enctype="multipart/form-data" style="text-align: center;">
+
+			<!--Name-->
+			<div>
+				<label for="name"><i class="fas fa-id-card"></i> Name</label>
+				<input type="text" name="name" id="name" placeholder="Name" required>
+			</div>
+
+			<!--Email-->
+			<div>
+				<label for="email"><i class="fas fa-envelope-open-text"></i> Email</label>
+				<input type="email" name="email" id="email" placeholder="Email" required="">
+			</div>
+			<br>
+
+		<table>
+			<table border="1" align="center" width="250">
+			<tr>
+				<th colspan="3"><label><i class="fas fa-glass-cheers"></i> DRINKS</label></th>
+			</tr>
+
+			<tr>
+				<div class="drink">
+
+					<div>
+						<th><label for="coffee"><i class="fas fa-coffee fa-xs"></i> Coffee</label>
+						<input type="radio" name="gender" id="coffee" value="coffee" required>
+						</th>
+					</div>
+
+					<div>
+						<th><label for="Tea"><i class="fas fa-mug-hot fa-xs"></i> Tea</label>
+						<input type="radio" name="gender" id="tea" value="tea" required>
+					</th>
+					</div>
+
+					<div>
+						<th><label for="shake"><i class="fab fa-gulp"></i> Shake</label>
+						<input type="radio" name="gender" id="shake" value="shake" required>
+					</th>
+					</div>
+
+				</div>
+			</table>
+		</table>
+
+			<!--CHOICE-->
+			<div class="choices">
+				<label for="drinks"><i class="fas fa-glass-cheers"></i> Choices</label>
+				<select name="drinks" id="drinks" required>
+					<option value="choices">--Choose--</option>
+					<option value="latte">Latte</option>
+					<option value="macchiato">Macchiato</option>
+					<option value="americano">Americano</option>
+					<option value="green tea">Green Tea</option>
+					<option value="black tea">Black Tea</option>
+					<option value="yellow tea">Yellow Tea</option>
+					<option value="cookies and cream milkshake">Cookies and Cream Milkshake</option>
+					<option value="chocolate milkshake">Chocolate Milkshake</option>
+					<option value="strawberry milkshake">Strawberry Milkshake</option>
+				</select>
+			</div>
+
+			<!--Quantity-->
+			<div>
+				<label for="age"><i class="fas fa-list-ol"></i> Quantity</label>
+				<input type="number" name="quantity" id="quantity" min="1" required>
+			</div>
+
+			<!--Text Area-->
+			<div>
+				<label for="bio"><i class="far fa-sticky-note"></i> Message</label>
+				<textarea name="message" id="message"></textarea>
+			</div>
+
+			<input type="hidden" name="secretData" id="secretData">
+
+			<!--Button-->
+			<br>
+			<button type="Reset" id="reset">Reset</button>
+			<button type="Submit" id="submit">Submit</button>
+		</form>
+	</body>
+</html>

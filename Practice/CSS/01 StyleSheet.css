@@ -1,0 +1,7 @@
+@font-face{
+	font-family: Arial;
+}
+
+input[type="text"]{
+	padding: 32px;
+}

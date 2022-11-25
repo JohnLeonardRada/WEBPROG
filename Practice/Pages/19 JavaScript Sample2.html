@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Title Page </title>
+    <script type="text/javascript">
+
+      function onChangeFunction(){
+          document.getElementById('output').innerHTML = document.getElementById('username').value;
+      }
+
+      function onClickFunction(){
+          //alert('Show');
+
+          var i = 0;
+
+          // USING WHILE
+          //while(i <= 10){
+          //  console.log(i);
+          //  i++;
+          //}
+
+          //USING DO-WHILE
+          //do{
+          //  console.log(i);
+          //  i++;
+          //}while(i <=10);
+
+          // USING FOR LOOP
+          //for(i=0; i<=10; i++){
+          //  if(i == 4){
+          //    break;
+          //  }
+          //  console.log(i);
+          //}
+
+          var Drinks = ["Coffee", "Tea", "Shake"];
+          //console.log(Drinks[0]);
+          console.log("Original:");
+          for(d in  Drinks){
+            console.log(Drinks[d]);
+          }
+
+          //Drinks.pop();
+          //Drinks.push("Other")
+          //Drinks.shift();
+          //Drinks.unshift("Sample"); //-- before first element
+          //Drinks.splice(2, 0, "Water", "Cold Water");
+          //Drinks.sort();
+          //Drinks.reverse();
+
+          console.log("Modified:");
+          for(d in  Drinks){
+            console.log(Drinks[d]);
+          }
+
+
+
+      }
+
+      function onMouseOverFunction(){
+         alert('Over');
+      }
+
+      function onMouseOutFunction(){
+         alert('Away');
+      }
+
+    </script>
+  </head>
+
+  <body onload="">
+
+      <input type="text" name="username" id="username" oninput="onChangeFunction()">
+      <br>
+      <select name="eyeColor" id="eyeColor">
+          <option value="black"> Black </option>
+          <option value="brown"> Brown </option>
+      </select>
+      <br>
+      <p id="output" onmouseover="onMouseOverFunction()" onmouseout="onMouseOutFunction()"> Sample </p>
+      <br>
+      <button onclick="onClickFunction()"> Button  </button>
+
+  </body>
+</html>

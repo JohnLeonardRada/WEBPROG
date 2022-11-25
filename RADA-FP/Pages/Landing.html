@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script type="text/javascript" src="../JS/Home.js"></script>
+
+</head>
+
+<body >
+    <div class="container">
+      <br>
+      <nav>
+        <ol class="breadcrumb">
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalSample">LOGIN </button>
+
+          <!-- MODAL -->
+          <div id="modalSample" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+
+                  <!-- MODAL CONTENT HEADER -->
+                <div class="modal-header">
+                  <h5>LOGIN</h5>
+                </div>
+
+                  <!-- MODAL CONTENT BODY -->
+                  <form action="Home.html" method="GET" id="formTest">
+                    <div class="modal-body">
+                      <div class="row">
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Username </div>
+                            </div>
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Username">
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Password </div>
+                            </div>
+                            <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                          </div>
+                        </div>
+
+                      </div>
+                     </div>
+
+                  <!-- MODAL CONTENT FOOTER -->
+                  <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" onclick="CheckOut()">Submit</a>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- TRIGGER 2 -->
+          <button class="btn btn-primary" data-toggle="modal" data-target="#modalSample2">REGISTER</button>
+
+          <!-- MODAL 2 -->
+          <div id="modalSample2" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                 
+                  <!-- MODAL CONTENT HEADER 2 -->
+                  <div class="modal-header">
+                    <h5>REGISTER</h5>
+                  </div>
+
+                  <!-- MODAL CONTENT BODY 2 -->
+                  <form action="Home.html" method="GET" id="formTest">
+                  <div class="modal-body">
+                      <div class="col">
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Name </div>
+                            </div>
+                            <input type="text" class="form-control" name="">
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Email </div>
+                            </div>
+                            <input type="text" class="form-control" name="">
+                          </div>
+                        </div>
+                        <br>
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Username </div>
+                            </div>
+                            <input type="text" class="form-control" name="username1" id="username1" placeholder="Username">
+                          </div>
+                        </div>
+
+                        <div class="col">
+                          <div class="input-group">
+                            <div class="input-group-prepend">
+                              <div class="input-group-text"> Password </div>
+                            </div>
+                            <input type="text" class="form-control" name="password" id="password" placeholder="Password">
+                          </div>
+                        </div>
+
+                      </div>
+                     </div>
+
+                  <!-- MODAL CONTENT FOOTER -->
+                  <div class="modal-footer">
+                    <a type="button" class="btn btn-primary" onclick="CheckOut1()">Submit</a>
+                  </div>
+                </form>
+
+              </div>
+            </div>
+          </div>
+
+        </ol>
+     </nav>
+
+              <!-- CAROUSEL -->
+              <br>
+              <br>
+              <div id="carouselSample" class="carousel slide">
+
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    <img class="d-block w-100" src="../Images/ip.jpg" width="700" height="700">
+                      <div class="carousel-caption">
+                        <h5 style="color:white"> iPhone 11 Pro </h5>
+                        <p style="color:white">A transformative triple‑camera system that adds tons of capability without complexity. An unprecedented leap in battery life. And a mind‑blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do. Welcome to the first iPhone powerful enough to be called Pro.</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../Images/s20.jpg" width="700" height="700">
+                      <div class="carousel-caption">
+                        <h5  style="color:black"> Samsung Galaxy S20 </h5>
+                        <p style="color:black">Meet Galaxy S20, S20+, and S20 Ultra. With revolutionary 8K Video Snap changing how you capture not just video, but photography — and 5G changing the way you share it.1 Add in Samsung Knox security, an intelligent battery, powerful processor, and massive storage — and the Galaxy S20 series unveils a whole new world for mobile.</p>
+                      </div>
+                  </div>
+
+                   <div class="carousel-item">
+                    <img class="d-block w-100" src="../Images/xb.jpg" width="700" height="700">
+                      <div class="carousel-caption">
+                        <h5  style="color:white"> Xbox Series X  </h5>
+                        <p style="color:white">The Xbox Series X is an upcoming home video game console developed by Microsoft. It was announced during E3 2019 as "Project Scarlett" and scheduled for release in late 2020. It will compete with Sony's PlayStation 5 and the Nintendo Switch.The console is one of the planned fourth-generation family of Xbox hardware, succeeding the current Xbox One line, and expected to have improved hardware for higher display resolutions and framerate and reduced loading times.</p>
+                      </div>
+                  </div>
+
+                  <div class="carousel-item">
+                    <img class="d-block w-100" src="../Images/sw.jpg" width="700" height="700">
+                      <div class="carousel-caption">
+                        <h5  style="color:black"> Nintendo Switch  </h5>
+                        <p style="color:black">The Nintendo Switch is a video game console developed by Nintendo, released worldwide in most regions on March 3, 2017. It is a hybrid console that can be used as a home console and portable device. Its wireless Joy-Con controllers, with standard buttons and directional analog sticks for user input, motion sensing, and tactile feedback, can attach to both sides of the console to support handheld-style play.</p>
+                      </div>
+                  </div>
+
+                </div>
+
+              <a href="#carouselSample" data-slide="prev" class="carousel-control-prev">
+                <span class="carousel-control-prev-icon"></span>
+              </a>
+
+              <a href="#carouselSample" data-slide="next" class="carousel-control-next">
+                <span class="carousel-control-next-icon"></span>
+              </a>
+
+          </div>
+        </div>
+
+</body>
+</html>

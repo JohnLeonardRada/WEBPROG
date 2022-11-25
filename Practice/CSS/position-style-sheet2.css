@@ -1,0 +1,66 @@
+body{
+	background-color: #FFD653FF
+}
+
+
+nav{
+	position: absolute;
+	width: 90%;
+	height: 34px;
+	background-color: #EEB238FF;
+	border-radius: 5px;
+	top: 85px;
+	text-align: right;
+
+}
+
+.menu{
+	position: relative;
+	display: inline-block;
+	width: 55px;
+	height: 24px;
+	padding: 5px;
+	font-size: 14px;
+	text-transform: uppercase;
+}
+
+.menu:hover{
+	background-color: red;
+}
+
+#logo{
+	position: absolute;
+	width: 250px;
+	height: 250px;
+	top: 0px;
+	z-index: 20;
+}
+
+section{
+	position: absolute;
+	width: 60%;
+	top: 200px;
+	background-color: #EEB238FF;
+	border-radius: 40px;
+	color: white;
+	padding: 10px;
+	float: right;
+	right: 10%;
+}
+
+a:link{
+	color: white;
+}
+
+a:hover{
+	color: white;
+	text-decoration: none;
+}
+
+a:active{
+	color: white; 
+}
+
+a:visited{
+	color: blue;
+}

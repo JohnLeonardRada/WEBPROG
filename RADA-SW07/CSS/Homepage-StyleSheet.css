@@ -1,0 +1,48 @@
+h1 {
+font-family: 'CustomFont', Aesthetik Script;
+font-weight:normal;
+font-style:normal;
+}
+
+.background{
+	background-image: url(../Images/bg1.jpg);
+	background-size: 50%;
+}
+
+.div-design{
+	background-color: #A8ff3E;
+	border: 2px solid #0AD48B;
+	border-radius: 20px;
+	padding: 1px;
+	margin: 10px auto;
+	width: 40%;
+}
+
+#custom-form table{
+	padding: 3px;
+	width: 50%;
+}
+
+.bar{
+  background-color: #A8ff3E;
+  position: sticky;
+  top: 5px;
+  padding: 2px;
+}
+
+.main-card-custom{
+	text-align: center;
+}
+.card-custom{
+	text-align: left;
+	width: 330px;
+	height: 330px;
+	background-color: pink;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+	border: 1px solid yellow;
+	color: white;
+	overflow: auto;
+	display: inline-block;
+}

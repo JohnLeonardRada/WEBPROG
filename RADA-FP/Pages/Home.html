@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+<style type="text/css">
+  
+  body {
+    background-image: url(../Images/bg.jpg);
+    background-size: 100%;
+  }
+
+
+.store-item{
+    /*width: 200px;
+    height: 200px;*/
+    background-color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid pink;
+    /*color: white;
+    overflow: auto;*/
+    display: inline-block;
+  }
+
+.store-items{
+    text-align: center;
+  }
+
+.store-item-image{
+    height: 250px;
+    width: 200px;
+  }
+
+.store-item-title{
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    width: 100%;
+  }
+
+.cart-item-image{
+    height: 200px;
+    width: 150px;
+  }
+
+.cart-item-price-base{
+    display: none;
+  }
+
+.header{
+    color: white;
+  }
+
+.store-item-desc{
+    display: none;
+  }
+
+.pic{
+  height: 465px;
+  width: 465px;
+}
+
+</style>
+
+<script type="text/javascript" src="../JS/Home.js"></script>
+
+</head>
+
+<body onload="ready(), ready1()">
+  <div class="container">
+    <br>
+    <nav>
+      <ol class="breadcrumb">
+       <button class="btn btn-primary" data-toggle="modal" data-target="#orderModal"> VIEW CART </button>
+         <h5>Username:<span id="usernametemp"></span></h5>
+      
+          <div class="modal fade" id="orderModal">
+            <div class="modal-dialog">
+              <div class="modal-content" id="modal-content">
+               
+                <div class="modal-header">
+                  <h5>Cart Summary</h5>
+                </div>
+
+                  <div class="modal-body">
+                    <div class="col">
+                      <input type="checkbox" name="" id="select-all" onclick="CheckboxFunction()">
+                        Select All
+                      <button onclick="RemovesSelectedCheckbox()"> Remove </button>
+                    </div>
+                    <div class="cart-items"></div>
+                  
+                    <div class="modal-footer">
+                      <span class="cart-total-price"> Php 0.00 </span>
+                      <button onclick="PurchaseFunction()"> CheckOut </button>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
+          </div>
+        </ol>
+     </nav>
+   </div>
+
+      <div class="store-items">
+        <div class="header" style="color:blue"><h1>Phone</h1></div>
+          
+          <div class="store-item">
+          <img class="store-item-image" src="../Images/ip.jpg" data-toggle="modal" data-target="#movieModal">
+
+              <div class="store-item-title"> iPhone 11 Pro </div>
+                <div class="store-item-desc">
+                <img src="../Images/ip.jpg" class="pic">
+                <p>A transformative triple‑camera system that adds tons of capability without complexity. An unprecedented leap in battery life. And a mind‑blowing chip that doubles down on machine learning and pushes the boundaries of what a smartphone can do. Welcome to the first iPhone powerful enough to be called Pro.</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 90000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+          <div class="store-item">
+          <img class="store-item-image" src="../Images/s20.jpg" data-toggle="modal" data-target="#movieModal">
+              
+              <div class="store-item-title"> Samsung Galaxy s20 </div>
+                <div class="store-item-desc">
+                <img src="../Images/s20.jpg" class="pic">
+                <p>Meet Galaxy S20, S20+, and S20 Ultra. With revolutionary 8K Video Snap changing how you capture not just video, but photography — and 5G changing the way you share it.1 Add in Samsung Knox security, an intelligent battery, powerful processor, and massive storage — and the Galaxy S20 series unveils a whole new world for mobile.</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 85000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+          <div class="store-item">
+          <img class="store-item-image" src="../Images/hw.jpg" data-toggle="modal" data-target="#movieModal">
+             
+              <div class="store-item-title"> Huawei P30 Pro </div>
+                <div class="store-item-desc">
+                <img src="../Images/hw.jpg" class="pic">
+                <p>Zoom in to explore the mystery of the celestial at night, watch an eagle hovering over trees or examine the delicate details of crystal. Capture the best things in the moment and create your vision for the future. The HUAWEI P30 Pro is accentuating a new peak of smartphone photography</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 75000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+          <br>
+          <br>
+          <div class="header" style="color:blue"><h1>Console</h1></div>
+
+          <div class="store-item">
+          <img class="store-item-image" src="../Images/xb.jpg" data-toggle="modal" data-target="#movieModal">
+             
+              <div class="store-item-title"> XBox Series X </div>
+                <div class="store-item-desc">
+                <img src="../Images/xb.jpg" class="pic">
+                <p>The Xbox Series X is an upcoming home video game console developed by Microsoft. It was announced during E3 2019 as "Project Scarlett" and scheduled for release in late 2020. It will compete with Sony's PlayStation 5 and the Nintendo Switch.The console is one of the planned fourth-generation family of Xbox hardware, succeeding the current Xbox One line, and expected to have improved hardware for higher display resolutions and framerate and reduced loading times.</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 23000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+           <div class="store-item">
+           <img class="store-item-image" src="../Images/sw.jpg" data-toggle="modal" data-target="#movieModal">
+             
+              <div class="store-item-title"> Nintendo Switch </div>
+                <div class="store-item-desc">
+                <img src="../Images/sw.jpg" class="pic">
+                <p>The Nintendo Switch is a video game console developed by Nintendo, released worldwide in most regions on March 3, 2017. It is a hybrid console that can be used as a home console and portable device. Its wireless Joy-Con controllers, with standard buttons and directional analog sticks for user input, motion sensing, and tactile feedback, can attach to both sides of the console to support handheld-style play.</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 15000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+           <div class="store-item">
+           <img class="store-item-image" src="../Images/ps.jpg" data-toggle="modal" data-target="#movieModal">
+             
+               <div class="store-item-title"> PS4 Pro </div>
+                <div class="store-item-desc">
+                <img src="../Images/ps.jpg" class="pic">
+                <p>PS4 Pro outputs gameplay to your 4K TV. Many games, like Call of Duty®: Black Ops 4, Gran Turismo Sport, and more, are optimised to look stunningly sharp and detailed when played on a 4K TV with PS4 Pro.</p>
+                </div>
+
+                <div class="store-item-details">
+                  <span class="store-item-price">Php 20000.00</span>
+                  <button class="store-item-button" onclick="this.disabled=true;">Add to cart</button>
+                </div>
+          </div>
+
+     </div>
+
+      <div class="modal fade" id="movieModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+              <div class="modal-header">
+                <span class="movie-title"></span>
+              </div>
+              <div class="modal-body">  
+                <span class="movie-des"></span>
+              </div>
+          </div>
+        </div>
+      </div>
+
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <title></title>
+    <script type="text/javascript">
+
+        function ready(){
+        var result = new URLSearchParams(window.location.search);
+
+        console.log(result.get('username'));
+        console.log(result.get('fname'));
+        console.log(result.get('lname'));
+
+        document.getElementsByClassName('username')[0].innerHTML = result.get('username');
+        }
+
+    </script>
+  </head>
+
+  <body onload="ready()">
+
+    <div class="username">
+
+    </div>
+  </body>
+</html>

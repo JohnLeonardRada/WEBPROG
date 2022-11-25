@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Order Confirmation</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+	<link rel="stylesheet" type="text/css" href="../CSS/order-confirmation-stylesheet.css">
+	<script type="text/javascript" src="../JS/Home.js"></script>
+</head>
+
+<style type="text/css">
+  body {
+	background-image: url(../Images/bg2.jpg);
+	background-size: 100%;
+  }
+
+</style>
+
+<body onload="onLoadItemsRedirectPage(), detail()">
+	<div class="head" style="text-align: center;">
+	<h1>Payment Successful!</h1>
+	<p>Your order #0000001 has been placed and will be processed soon for delivery. <br>Your payment confirmation will be sent via email.</p>
+
+		<div class = "head2">
+			<br>
+			<table border="1" align="center" width = 100%;>
+				<div id="order-confirmation">
+					<h3 id="result"> Final Details: </h3>
+					First Name:
+					<span id="fnametemp"></span>
+					<br>
+					Last Name:
+					<span id="lnametemp"></span>
+					<br>
+					Address:
+					<span id="addresstemp"></span>
+					<br><br>
+				</div>
+			</table>
+
+			<br><br>
+			<table border="1" align="center" width = 100%;>
+				<div class = "item-purchased">
+                
+            	</div>
+			</table>
+			<br><br>
+			<table border="1" align="center" width = 100%;>
+				<div class = "head4">
+					<tr>
+						<th width = 150px;> Subtotal: </th>
+						<td style="text-align: right;"> P4,000.00 </td>
+					</tr>
+
+					<tr>
+						<th width = 150px;> Shipping: </th>
+						<td style="text-align: right;"> P0.00 </td>
+					</tr>
+
+				</div>
+			</table>
+			<h1 style="text-align:center;">Total: P4,000.00</h1>
+			<button><a href="../Pages/Home.html"> Home </a></button>
+
+		</div>
+	</div>
+
+</body>
+</html>

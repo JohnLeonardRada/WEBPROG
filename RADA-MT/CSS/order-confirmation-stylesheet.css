@@ -1,0 +1,25 @@
+.head{
+	border: 2px solid;
+	border-radius: 10px;
+	padding: 10px;
+	margin: 10px auto;
+	width: 40%;
+
+}
+
+.head2{
+	border: 2px solid;
+	border-radius: 5px;
+	padding: 10px;
+	margin: 10px auto;
+	width: 80%;
+
+}
+
+.head3{
+	text-align: left;
+}
+
+.head4, th{
+	text-align: left;
+}
